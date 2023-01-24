@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ApplicationIcon>vdfexe.ico</ApplicationIcon>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <ProductName>Path Finder</ProductName>
+    <SuiteName>Wyzrs</SuiteName>
+    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F0711D2966C0887EC56A0CDA231BC17191198DF2</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PathFinder_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5193631A-A8CE-44D4-874A-69C1B0019174}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PathFinder</RootNamespace>
+    <AssemblyName>PathFinder</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="clipper_library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PolygonClipper\PolygonClipper\clipper_library\bin\Debug\clipper_library.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.OrTools">
+      <HintPath>dll\Google.OrTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>dll\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectListView">
+      <HintPath>.\ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenVDF, Version=6.6028.1.15, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\vdraw7\REDIS\AnyCPU\OpenVDF.dll</HintPath>
+    </Reference>
+    <Reference Include="RenderFormats, Version=6.6028.1.15, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\vdraw7\REDIS\AnyCPU\RenderFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="vdCommandLine, Version=6.6028.1.15, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\vdraw7\REDIS\AnyCPU\vdCommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="vdDXF, Version=6.6028.1.15, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\vdraw7\REDIS\AnyCPU\vdDXF.dll</HintPath>
+    </Reference>
+    <Reference Include="vdFramedControl, Version=6.6028.1.15, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\vdraw7\REDIS\AnyCPU\vdFramedControl.dll</HintPath>
+    </Reference>
+    <Reference Include="vdgrAPI">
+      <HintPath>..\..\..\REDIS\AnyCPU\vdgrAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="vdIFC, Version=8.8002.0.4, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\vdraw7\REDIS\AnyCPU\vdIFC.dll</HintPath>
+    </Reference>
+    <Reference Include="vdPropertyGrid, Version=6.6028.1.15, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\vdraw7\REDIS\AnyCPU\vdPropertyGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="VDrawBaseControl, Version=6.6028.1.15, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\vdraw7\REDIS\AnyCPU\VDrawBaseControl.dll</HintPath>
+    </Reference>
+    <Reference Include="vdScrollableControl, Version=6.6028.1.15, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\vdraw7\REDIS\AnyCPU\vdScrollableControl.dll</HintPath>
+    </Reference>
+    <Reference Include="vdxFcnv, Version=6.6028.1.15, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\vdraw7\REDIS\AnyCPU\vdxFcnv.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.Actions, Version=6.6028.1.15, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\vdraw7\REDIS\AnyCPU\VectorDraw.Actions.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.Generics, Version=6.6028.1.15, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\vdraw7\REDIS\AnyCPU\VectorDraw.Generics.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.Geometry, Version=6.6028.1.15, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\vdraw7\REDIS\AnyCPU\VectorDraw.Geometry.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.Professional, Version=6.6028.1.15, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\vdraw7\REDIS\AnyCPU\VectorDraw.Professional.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.Render, Version=6.6028.1.15, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\vdraw7\REDIS\AnyCPU\VectorDraw.Render.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.Serialize, Version=6.6028.1.15, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\vdraw7\REDIS\AnyCPU\VectorDraw.Serialize.dll</HintPath>
+    </Reference>
+    <Reference Include="VectorDraw.SolidModel, Version=8.8002.0.4, Culture=neutral, PublicKeyToken=54eac14e23c9ee53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\vdraw7\REDIS\AnyCPU\VectorDraw.SolidModel.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="analysis\AnalysisShortDistance.cs" />
+    <Compile Include="analysis\AnalysisShortDistanceR.cs" />
+    <Compile Include="analysis\Dijkstra.cs" />
+    <Compile Include="gui\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\CheckBoxSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\CheckBoxSelection.Designer.cs">
+      <DependentUpon>CheckBoxSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\HostedCheckbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="gui\sequenceDataGridView_CellClick.cs" />
+    <Compile Include="gui\SequenceSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\SequenceSettingForm.Designer.cs">
+      <DependentUpon>SequenceSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\PathFinderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\PathFinderForm.Designer.cs">
+      <DependentUpon>PathFinderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gpc\GpcWrapper.cs" />
+    <Compile Include="gui\AnalysisRouteControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\AnalysisRouteControl.Designer.cs">
+      <DependentUpon>AnalysisRouteControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\MainRouteControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\MainRouteControl.Designer.cs">
+      <DependentUpon>MainRouteControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\ObstacleSettingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\ObstacleSettingControl.Designer.cs">
+      <DependentUpon>ObstacleSettingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\RoomGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\RoomGroupForm.Designer.cs">
+      <DependentUpon>RoomGroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\SequenceSettingControlcs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\SequenceSettingControlcs.Designer.cs">
+      <DependentUpon>SequenceSettingControlcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBox.Designer.cs">
+      <DependentUpon>MessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="object\DoorToDoorWay.cs" />
+    <Compile Include="object\DoorToRoomCenterWay.cs" />
+    <Compile Include="object\Obstacle.cs" />
+    <Compile Include="object\DefinedSequence.cs" />
+    <Compile Include="object\GroupPoint.cs" />
+    <Compile Include="object\Info.cs" />
+    <Compile Include="object\MainRoute.cs" />
+    <Compile Include="object\RoomAndGroupObject.cs" />
+    <Compile Include="object\RoomConnection.cs" />
+    <Compile Include="object\RoomGroup.cs" />
+    <Compile Include="object\Connector.cs" />
+    <Compile Include="object\Floor.cs" />
+    <Compile Include="gui\PathFinderBimForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\PathFinderBimForm.Designer.cs">
+      <DependentUpon>PathFinderBimForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mTreeNode.cs" />
+    <Compile Include="object\RoomRelation.cs" />
+    <Compile Include="object\Sequence.cs" />
+    <Compile Include="object\SubSequence.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="object\Room.cs" />
+    <Compile Include="object\SequenceGroup.cs" />
+    <Compile Include="gui\RoomGroupControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\RoomGroupControl.Designer.cs">
+      <DependentUpon>RoomGroupControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="util\CadUtil.cs" />
+    <Compile Include="util\Combination.cs" />
+    <Compile Include="util\FindUtil.cs" />
+    <Compile Include="util\IFCToCAD.cs" />
+    <Compile Include="util\Permutation.cs" />
+    <Compile Include="util\Protocol.cs" />
+    <Compile Include="util\ReadWriteUtil.cs" />
+    <EmbeddedResource Include="gui\CheckBoxSelection.resx">
+      <DependentUpon>CheckBoxSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\PathFinderBimForm.resx">
+      <DependentUpon>PathFinderBimForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\PathFinderForm.resx">
+      <DependentUpon>PathFinderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\AnalysisRouteControl.resx">
+      <DependentUpon>AnalysisRouteControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\MainRouteControl.resx">
+      <DependentUpon>MainRouteControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\ObstacleSettingControl.resx">
+      <DependentUpon>ObstacleSettingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\RoomGroupForm.resx">
+      <DependentUpon>RoomGroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\SequenceSettingControlcs.resx">
+      <DependentUpon>SequenceSettingControlcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\SequenceSettingForm.resx">
+      <DependentUpon>SequenceSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBox.resx">
+      <DependentUpon>MessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="gui\RoomGroupControl.resx">
+      <DependentUpon>RoomGroupControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include=".editorconfig" />
+    <None Include="packages.config" />
+    <None Include="PathFinder_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ObjectListView.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\iDeaq 3D -12.ico" />
+    <None Include="Resources\iDeaq 3D -04.ico" />
+    <None Include="Resources\iDeaq 3D -62.ico" />
+    <None Include="Resources\iDeaq 3D -18.ico" />
+    <None Include="Resources\iDeaq 3D -10.ico" />
+    <None Include="Resources\iDeaq 3D -25.ico" />
+    <None Include="Resources\iDeaq 3D -80.ico" />
+    <None Include="Resources\iDeaq 3D -09.ico" />
+    <None Include="Resources\iDeaq 3D -114.ico" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\minus.png" />
+    <None Include="Resources\up-arrows.png" />
+    <None Include="Resources\down-arrow.png" />
+    <None Include="Resources\Setting_Save.png" />
+    <None Include="Resources\open.png" />
+    <None Include="Resources\zoom-in.png" />
+    <None Include="Resources\ifc import.png" />
+    <None Include="Resources\start analysis.png" />
+    <None Include="Resources\stop.png" />
+    <None Include="Resources\excel.png" />
+    <None Include="Resources\Main_Save.png" />
+    <None Include="Resources\Clear route.png" />
+    <Content Include="vdfexe.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="gui\NewFolder1\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"$(VDRAWDEV)vdlic.exe"  "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>
